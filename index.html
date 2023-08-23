@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calvin's portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6c3ec77bdf.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -12,18 +13,18 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/L1.png" class="logo">
+                <img src="images/logo.png" class="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#about">About Me</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#">Contact me</a></li>
                 </ul>
             </nav>
             <div class="header-text">
-                <p>UI/UX Designer</p>
-                <h1>Hi, I am <span>Calvin</span><br> Mwaniky From Kenya</h1>
+                <!-- <p>DEVELOPER</p> -->
+                <h1>Hi, I am <span>Calvin</span><br> Mwaniky a developer <br> from Kenya</h1>
             </div>
         </div>
 
@@ -38,28 +39,124 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <p>I am a dedicated third-year BBIT student at Strathmore University, where I am enthusiastically honing my skills in both programming and business. My journey has shown me that the synergy between these two fields can create truly remarkable outcomes. As the firstborn in a family of two, I have always felt a strong responsibility to lead by example and pave the way for my sibling. <br> <br>
+
+                    What truly sets my heart on fire is the constant pursuit of improvement. I thrive on challenges and believe in the power of continuous learning. Every day presents an opportunity for growth, and I am committed to seizing it with open arms. I am not only passionate about expanding my own skill set, but I also find immense joy in collaborating with others. I firmly believe that diverse perspectives fuel innovation and lead to superior results. <br> <br>
+                    
+                    My journey so far has been marked by determination, resilience, and a hunger for knowledge. With a firm belief in the potential of harmonizing technology and business acumen, I aspire to propel my programming skills forward while leveraging my business insights. Through my portfolio, I invite you to join me on this exciting journey of exploration, growth, and impact.</p>
 
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <h1 class="tab-links active-link" onclick="opentab('skills')">Skills</h1>
+                        <h1 class="tab-links" onclick="opentab('experience')">Experience</h1>
+                        <h1 class="tab-links" onclick="opentab('education')">Education</h1>
                     </div>
 
-                    <div class="tab-contents">
+                    <div class="tab-contents active-tab" id="skills">
                         <ul>
-                            <li><span>UI/UX</span><br>Designing web app interfaces</li>
-                            <li><span>Web Development</span><br>Developing web applications</li>
-                            <li><span>Mobile Application Development</span><br>Designing and building of Android and IOS applications</li>
-                        </ul>
-
-                        
+                            <li><span>UI/UX</span><br>Designing web app interfaces using Figma</li>
+                            <li><span>Web Development</span><br>Developing web applications suing HTML, CSS, JavaScripyt, PHP and Laravel</li>
+                            <li><span>Mobile Application Development</span><br>Designing and building of Android and IOS applications using Flutter</li>
+                        </ul>   
                     </div>
 
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2021 November - 2022 January</span><br>Worked at Strathmore University as an admissions intern. Here I learnt how to handle data for the admissions office.</li>
 
+                            <li><span>2021 March - 2021 October</span><br>Worked at Tire World as an all round intern where I was taken to different departments and equiped with the skills to work in those departments.</li>
+                        </ul>   
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022 - Current </span><br>Student at Strathmore University <br>Bachelors in Business and Information Technology.</li>
+
+                            <li><span>2020 - 2021</span><br>Student at Strathmore University <br>Diploma in Business and Indformation Technology <br>Grade: B</li>
+
+                            <li><span>2016-2019</span><br>Kianjai High School <br>Kenya Certificate of Secondary Education <br>Grade: C</li>
+
+                            <li><span>2007 - 2015</span><br>Kubukubu Memorial Boarding Primary School <br>Kenya Certificate of Primary Education <br>Grade: 358</li>
+                        </ul>   
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Services Section -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub0tile">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web application Design</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-crop-alt"></i>
+                    <h2>Ui/UX designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <i class="fa-brands fa-app-store"></i>
+                    <h2>Mobile Application Designing</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quo.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Portfolio Section -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                    </div>
+                </div>
+
+                <div class="work">
+                    <img src="images/work-2.png">
+                </div>
+
+                <div class="work">
+                    <img src="images/work-3.png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
 </body>
 </html>
