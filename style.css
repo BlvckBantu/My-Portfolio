@@ -105,7 +105,7 @@ nav ul li a:hover::after {
 .about-col-1 img {
     width: 100%;
     border-radius: 20px;
-    height: 750px;
+    /* height: 750px; */
 }
 
 .about-col-2 {
@@ -235,7 +235,7 @@ nav ul li a:hover::after {
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-gap: 40px;
     margin-top: 50px;
 }
@@ -248,6 +248,7 @@ nav ul li a:hover::after {
 
 .work img {
     width: 100%;
+    max-height: 100%; /* Added max-height to prevent images from overflowing */
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -266,23 +267,23 @@ nav ul li a:hover::after {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 0 20px; /* Adjusted padding for smaller screens */
     text-align: center;
-    font-size: 19px;
+    font-size: 15px; /* Reduced font size for smaller screens */
     transition: height 0.5s;
 }
 
 .layer h3 {
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Adjusted margin for smaller screens */
 }
 
 .layer a {
-    margin-top: 20px;
+    margin-top: 10px; /* Adjusted margin for smaller screens */
     color: #da9fb1;
     text-decoration: none;
-    font-size: 15px;
-    padding: 10px 25px;
+    font-size: 14px; /* Reduced font size for smaller screens */
+    padding: 8px 15px; /* Adjusted padding for smaller screens */
     border: 2px solid #da9fb1;
     border-radius: 5px;
     transition: background 0.5s, color 0.5s;
@@ -301,7 +302,7 @@ nav ul li a:hover::after {
     margin: 20px auto;
     width: fit-content;
     border: 1px solid #ff004f;
-    padding: 14px 50px;
+    padding: 14px 30px; /* Adjusted padding for smaller screens */
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
@@ -309,7 +310,34 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-    background:#ff004f;
+    background: #ff004f;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .work-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column size for smaller screens */
+        grid-gap: 20px; /* Adjust grid gap for smaller screens */
+    }
+
+    .layer {
+        padding: 0 10px; /* Further adjusted padding for smaller screens */
+        font-size: 12px; /* Reduced font size for smaller screens */
+    }
+
+    .layer h3 {
+        margin-bottom: 8px; /* Further adjusted margin for smaller screens */
+    }
+
+    .layer a {
+        margin-top: 8px; /* Further adjusted margin for smaller screens */
+        font-size: 11px; /* Further reduced font size for smaller screens */
+        padding: 6px 12px; /* Further adjusted padding for smaller screens */
+    }
+
+    .btn {
+        padding: 12px 25px; /* Further adjusted padding for smaller screens */
+    }
 }
 
 /* Contact me section */
@@ -472,8 +500,39 @@ form input, form textarea {
 }
 
 #msg {
-    color: #61b752;
+    color: #ff004f;
     margin-top: -5px;
     display: block;
 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* Navigation bar title words */
+    #header ul li a {
+        font-size: 16px; /* Adjust the font size as needed */
+    }
+
+    /* Reduce the size of the image in the About Me section */
+    .about-col-1 img {
+        max-height: 300px; /* Adjust the maximum height as needed */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-img {
+        display: none;
+    }
+}
+
+@media (max-width: 477px) {
+    .tab-title {
+        font-size: 14px; /* Adjust the font size as needed */
+        padding: 5px 10px; /* Adjust the padding as needed */
+    }
+    
+    /* Ensure that the tab titles don't wrap */
+    .tab {
+        white-space: nowrap;
+    }
 }
