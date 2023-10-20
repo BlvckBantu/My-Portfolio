@@ -44,6 +44,12 @@ a:hover {
     justify-content: space-between;
 }
 
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
 .navbar .logo a {
     font-weight: bold;
     font-size: 1.5rem;
