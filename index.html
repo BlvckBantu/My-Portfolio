@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Calvin's portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6c3ec77bdf.js" crossorigin="anonymous"></script>
@@ -11,16 +12,45 @@
 
 <!-- Header Section -->
 <div id="header">
-    <nav>
-        <div class="logo">Calvin MWaniky</div>
-        <ul>
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">ABout</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<div class="navbar">
+    <div class="logo"><a href="#">BlvckBantu</a></div>
+    <ul class="links">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#header">About</a></li>
+        <li><a href="#header">Services</a></li>
+        <li><a href="#header">Portfolio</a></li>
+        <li><a href="#header">Contact</a></li>
+    </ul>
+
+    <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</div>
+
+<div class="dropdown_menu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#header">About</a></li>
+        <li><a href="#header">Services</a></li>
+        <li><a href="#header">Portfolio</a></li>
+        <li><a href="#header">Contact</a></li>
+</div>
+
+<script>
+    const toggleBtn = document.querySelector(".toggle_btn");
+    const toggleBtnIcon = document.querySelector(".toggle_btn i");
+    const dropDownMenu = document.querySelector(".dropdown_menu");
+    
+    toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open');
+
+        toggleBtnIcon.className = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+    };
+</script>
+
+
 
     <div class="container">
         <div class="header-text">
@@ -127,7 +157,7 @@
                 <div class="work">
                     <img src="images/work-2.jpg">
                     <div class="layer">
-                        <h3>Job Listing App</h3>
+                        <h3>Job Listing Web Application</h3>
                         <p>The web application connects employers and employees where the employers post a vacant position on the web application then a candidate that feels like they are suitable for that position send the resumes on that particular job post.</p>
                         <a href="https://github.com/BlvckBantu/Job-Lisitng-Website"><i class="fa-solid fa-up-right-from-square"></i></a>
                     </div>
