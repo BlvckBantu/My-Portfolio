@@ -1,299 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Calvin's portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/6c3ec77bdf.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/6c3ec77bdf.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <div id="header">
+      <div class="navbar">
+        <div class="logo"><a href="#">BlvckBantu</a></div>
+        <ul class="links">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-<!-- Header Section -->
-<div id="header">
-<div class="navbar">
-    <div class="logo"><a href="#">BlvckBantu</a></div>
-    <ul class="links">
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+
+      <div class="dropdown_menu">
         <li><a href="#header">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
-    </ul>
+      </div>
 
-    <div class="toggle_btn">
-        <i class="fa-solid fa-bars"></i>
-    </div>
-</div>
+      <script>
+        const toggleBtn = document.querySelector(".toggle_btn");
+        const toggleBtnIcon = document.querySelector(".toggle_btn i");
+        const dropDownMenu = document.querySelector(".dropdown_menu");
 
-<div class="dropdown_menu">
-    <li><a href="#header">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#contact">Contact</a></li>
-</div>
+        toggleBtn.onclick = function () {
+          dropDownMenu.classList.toggle("open");
+          const isOpen = dropDownMenu.classList.contains("open");
 
-<script>
-    const toggleBtn = document.querySelector(".toggle_btn");
-    const toggleBtnIcon = document.querySelector(".toggle_btn i");
-    const dropDownMenu = document.querySelector(".dropdown_menu");
-    
-    toggleBtn.onclick = function () {
-        dropDownMenu.classList.toggle('open')
-        const isOpen = dropDownMenu.classList.contains('open');
+          toggleBtnIcon.className = isOpen
+            ? "fa-solid fa-xmark"
+            : "fa-solid fa-bars";
+        };
+      </script>
 
-        toggleBtnIcon.className = isOpen
-        ? 'fa-solid fa-xmark'
-        : 'fa-solid fa-bars'
-    };
-</script>
-
-
-
-    <div class="container">
+      <div class="container">
         <div class="header-text">
-            <h1>Hi, I'm <span>Calvin</span><br> Mwaniky, a designer <br> and developer <br> from Kenya.</h1>
+          <h1>
+            Hi, I'm <span>Calvin</span><br />
+            Mwaniky, a designer <br />
+            and developer <br />
+            from Kenya.
+          </h1>
         </div>
+      </div>
     </div>
-</div>
 
     <!-- About Section -->
     <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="./images/w2.jpg ">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>I am a dedicated third-year BBIT student at Strathmore University, where I am enthusiastically honing my skills in both programming and business. My journey has shown me that the synergy between these two fields can create truly remarkable outcomes.</p>
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="./images/newbackground.jpg " />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I am a dedicated third-year BBIT student at Strathmore University,
+              where I am enthusiastically honing my skills in both programming
+              and business. My journey has shown me that the synergy between
+              these two fields can create truly remarkable outcomes.
+            </p>
 
-                    <p>What truly sets my heart on fire is the constant pursuit of improvement. I thrive on challenges and believe in the power of continuous learning. Every day presents an opportunity for growth, and I am committed to seizing it with open arms. I am not only passionate about expanding my own skill set, but I also find immense joy in collaborating with others. I firmly believe that diverse perspectives fuel innovation and lead to superior results.</p>
-                    
-                   <p>My journey so far has been marked by determination, resilience, and a hunger for knowledge. With a firm belief in the potential of harmonizing technology and business acumen, I aspire to propel my programming skills forward while leveraging my business insights. Through my portfolio, I invite you to join me on this exciting journey of exploration, growth, and impact.</p>
+            <p>
+              What truly sets my heart on fire is the constant pursuit of
+              improvement. I thrive on challenges and believe in the power of
+              continuous learning. Every day presents an opportunity for growth,
+              and I am committed to seizing it with open arms. I am not only
+              passionate about expanding my own skill set, but I also find
+              immense joy in collaborating with others. I firmly believe that
+              diverse perspectives fuel innovation and lead to superior results.
+            </p>
 
-                    <div class="tab-titles">
-                        <h1 class="tab-links active-link" onclick="opentab('skills')">Skills</h1>
-                        <h1 class="tab-links" onclick="opentab('experience')">Experience</h1>
-                        <h1 class="tab-links" onclick="opentab('education')">Education</h1>
-                    </div>
+            <p>
+              My journey so far has been marked by determination, resilience,
+              and a hunger for knowledge. With a firm belief in the potential of
+              harmonizing technology and business acumen, I aspire to propel my
+              programming skills forward while leveraging my business insights.
+              Through my portfolio, I invite you to join me on this exciting
+              journey of exploration, growth, and impact.
+            </p>
 
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX design</span><br>Designing web application interfaces using Figma.</li>
-
-                            <li><span>Web Development</span><br>Developing web applications using HTML, CSS, JavaScript, Python, PHP and Laravel.</li>
-
-                            <li><span>Mobile Application Development</span><br>Designing and building of Android and IOS applications.</li>
-
-                            <li><span>Editing</span><br>Making of posters for events, parties and anouncements.</li>
-                        </ul>   
-                    </div>
-
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023 May - Current</span><br>Working with my team at Strathmore university in building a digital reception system for Nairobi Hospice.</li>
-
-                            <li><span>2021 November - 2022 January</span><br>Worked at the Strathmore University admissions office as an intern. Here I learnt how to handle data for the admissions office.</li>
-
-                            <li><span>2021 March - 2021 October</span><br>Worked at Tire World as an all round intern where I was taken to different departments and equiped with the skills to work in those departments.</li>
-                        </ul>   
-                    </div>
-
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2022 - Current </span><br>Student at Strathmore University <br>Bachelors in Business and Information Technology.</li>
-
-                            <li><span>2020 - 2021</span><br>Student at Strathmore University <br>Diploma in Business and Information Technology</li>
-                        </ul>   
-                    </div>
-                </div>
+            <div class="tab-titles">
+              <h1 class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </h1>
+              <h1 class="tab-links" onclick="opentab('experience')">
+                Experience
+              </h1>
+              <h1 class="tab-links" onclick="opentab('education')">
+                Education
+              </h1>
             </div>
-        </div>
-    </div>
 
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>UI/UX design</span><br />Designing web application
+                  interfaces using Figma.
+                </li>
+
+                <li>
+                  <span>Web Development</span><br />Developing web applications
+                  using HTML, CSS, JavaScript, Python, PHP and Laravel.
+                </li>
+
+                <li>
+                  <span>Mobile Application Development</span><br />Designing and
+                  building of Android and IOS applications.
+                </li>
+
+                <li>
+                  <span>Editing</span><br />Making of posters for events,
+                  parties and anouncements.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2023 May - Current</span><br />Working with my team at
+                  Strathmore university in building a digital reception system
+                  for Nairobi Hospice.
+                </li>
+
+                <li>
+                  <span>2021 November - 2022 January</span><br />Worked at the
+                  Strathmore University admissions office as an intern. Here I
+                  learnt how to handle data for the admissions office.
+                </li>
+
+                <li>
+                  <span>2021 March - 2021 October</span><br />Worked at Tire
+                  World as an all round intern where I was taken to different
+                  departments and equiped with the skills to work in those
+                  departments.
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022 - Current </span><br />Student at Strathmore
+                  University <br />Bachelors in Business and Information
+                  Technology.
+                </li>
+
+                <li>
+                  <span>2020 - 2021</span><br />Student at Strathmore University
+                  <br />Diploma in Business and Information Technology
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Services Section -->
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Application Design and Development</h2>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Application Design and Development</h2>
+          </div>
 
-                <div>
-                    <i class="fa-solid fa-crop-alt"></i>
-                    <h2>UI/UX Designing</h2>
-                </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>Mobile Application Design and Development</h2>
+          </div>
 
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Mobile Application Design and Development</h2>
-                </div>
-            </div>
+          <div>
+            <i class="fa-solid fa-crop-alt"></i>
+            <h2>UI/UX Designing e.g Posters & Wireframes</h2>
+          </div>
         </div>
+      </div>
     </div>
 
-
-        <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="images/work-1.jpg">
-                    <div class="layer">
-                        <h3>Hospital Webpgae</h3>
-                        <p>This hospital webpage displays details about an imaginary hospital. The webpage is responsive and also has a couple of extra cool features designed using CSS.</p>
-                        <a href="https://github.com/BlvckBantu/Hospital-Webpage"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-
-                <div class="work">
-                    <img src="images/work-2.jpg">
-                    <div class="layer">
-                        <h3>Job Listing Web Application</h3>
-                        <p>The web application connects employers and employees where the employers post a vacant position on the web application then a candidate that feels like they are suitable for that position send the resumes on that particular job post.</p>
-                        <a href="https://github.com/BlvckBantu/Job-Lisitng-Website"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-
-                <div class="work">
-                    <img src="images/work-3.jpg">
-                    <div class="layer">
-                        <h3>Library Management System</h3>
-                        <p>This system allows a librarian to add books into the libarary's database, edit details about a particular book and deleting a particular book from the database.</p>
-                        <a href="https://github.com/BlvckBantu/Library-Management-System"><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.jpg" />
+            <div class="layer">
+              <h3>Hospital Webpgae</h3>
+              <p>
+                This hospital webpage displays details about an imaginary
+                hospital. The webpage is responsive and also has a couple of
+                extra cool features designed using CSS.
+              </p>
+              <a href="https://github.com/BlvckBantu/Hospital-Webpage"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
             </div>
+          </div>
 
-            <a href="https://github.com/BlvckBantu" target="_blank"class="btn">See More</a>
+          <div class="work">
+            <img src="images/work-2.jpg" />
+            <div class="layer">
+              <h3>Job Listing Web Application</h3>
+              <p>
+                The web application connects employers and employees where the
+                employers post a vacant position on the web application then a
+                candidate that feels like they are suitable for that position
+                send the resumes on that particular job post.
+              </p>
+              <a href="https://github.com/BlvckBantu/Job-Lisitng-Website"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="work">
+            <img src="images/work-3.jpg" />
+            <div class="layer">
+              <h3>Library Management System</h3>
+              <p>
+                This system allows a librarian to add books into the libarary's
+                database, edit details about a particular book and deleting a
+                particular book from the database.
+              </p>
+              <a href="https://github.com/BlvckBantu/Library-Management-System"
+                ><i class="fa-solid fa-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
         </div>
+
+        <a href="https://github.com/BlvckBantu" target="_blank" class="btn"
+          >See More</a
+        >
+      </div>
     </div>
 
     <!-- Contact Me section-->
     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i>blvckbantu@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i>0738886733</p>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/__bv.ntu__/"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://twitter.com/Xxxlndiojacket_?t=Cyv3VjwoSCkP1P8OOBKbaw&s=09"><i class="fa-brands fa-x-twitter"></i></a>
-                        <a href="https://github.com/BlvckBantu"><i class="fa-brands fa-square-github"></i></a>
-                    </div>
-                    <a href="images/Calvin Njeru Professional Resume.pdf" download class="btn btn2">Download My Resume</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" id="" cols="6" rows="10" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-
-                    <span id="msg"></span>
-
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>blvckbantu@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>0738886733</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/__bv.ntu__/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="https://twitter.com/Xxxlndiojacket_?t=Cyv3VjwoSCkP1P8OOBKbaw&s=09"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="https://github.com/BlvckBantu"
+                ><i class="fa-brands fa-square-github"></i
+              ></a>
             </div>
+            <a
+              href="images/Calvin Njeru Professional Resume.pdf"
+              download
+              class="btn btn2"
+              >Download My Resume</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                id=""
+                cols="6"
+                rows="10"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+
+            <span id="msg"></span>
+          </div>
         </div>
-</div>
-
-
-
+      </div>
+    </div>
 
     <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
         }
 
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
 
-        function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     </script>
 
     <script>
-       var sidemenu = document.getElementById("sidemenu");
-var menuIcon = document.querySelector(".menu-icon");
+      var sidemenu = document.getElementById("sidemenu");
+      var menuIcon = document.querySelector(".menu-icon");
 
-function toggleMenu() {
-    var sidemenu = document.getElementById("sidemenu");
-    var menuIcon = document.querySelector(".fa-bars");
-    var closeIcon = document.querySelector(".fa-xmark");
+      function toggleMenu() {
+        var sidemenu = document.getElementById("sidemenu");
+        var menuIcon = document.querySelector(".fa-bars");
+        var closeIcon = document.querySelector(".fa-xmark");
 
-    sidemenu.classList.toggle("show-menu");
-    menuIcon.style.display = menuIcon.style.display === 'none' ? 'block' : 'none';
-    closeIcon.style.display = closeIcon.style.display === 'none' ? 'block' : 'none';
-}
+        sidemenu.classList.toggle("show-menu");
+        menuIcon.style.display =
+          menuIcon.style.display === "none" ? "block" : "none";
+        closeIcon.style.display =
+          closeIcon.style.display === "none" ? "block" : "none";
+      }
 
-menuIcon.addEventListener("click", toggleMenu);
-closeIcon.addEventListener("click", toggleMenu);
-</script>
+      menuIcon.addEventListener("click", toggleMenu);
+      closeIcon.addEventListener("click", toggleMenu);
+    </script>
 
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzf4cLfAunJt3Yl4UNqCU6quHxHjLKp8lVmb29gQGMdluflJd6u4pB7Hsb1ghfiIOncQQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzf4cLfAunJt3Yl4UNqCU6quHxHjLKp8lVmb29gQGMdluflJd6u4pB7Hsb1ghfiIOncQQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg')
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message Sent Successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
 
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message Sent Successfully"
-            setTimeout(function(){
-                msg.innerHTML = ""
-            }, 5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
+    <script>
+      // JavaScript to toggle the navigation menu on click of the menu icon
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navMenu = document.querySelector("nav ul");
 
-<script>
-    // JavaScript to toggle the navigation menu on click of the menu icon
-    document.addEventListener('DOMContentLoaded', function () {
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-
-        menuToggle.addEventListener('click', function () {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
+        menuToggle.addEventListener("click", function () {
+          this.classList.toggle("active");
+          navMenu.classList.toggle("active");
         });
-    });
-</script>
+      });
+    </script>
 
-<footer>
+    <footer>
+      <div class="copyright">
+        <p>Copyright © Calvin Mwaniky</p>
+      </div>
 
-    <div class="copyright">
-        <p>Copyright © Calvin Mwaniky </p>
-    </div>
-    
-    <!-- Back to Top Button -->
-<div class="back-to-top-btn" onclick="scrollToTop()">
-    <i class="fas fa-arrow-up"></i>
-</div>
-</footer>
-</body>
+      <!-- Back to Top Button -->
+      <div class="back-to-top-btn" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </div>
+    </footer>
+  </body>
 </html>
