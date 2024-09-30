@@ -529,20 +529,24 @@ form textarea {
   .about-col-2 {
     flex-basis: 100%;
     text-align: center;
+    margin: 0 auto; /* Centers the div */
+  }
+
+  .about-col-2 p {
+    text-align: justify; /* Ensures the paragraphs are justified */
+    margin: 0 10px; /* Adds some padding to prevent overflow */
   }
 
   .about-col-1 img {
     max-width: 50%;
   }
 
-  .services-list {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-  }
-
+  .services-list,
   .work-list {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
+
 
 #msg {
   color: #ff004f;
